@@ -31,7 +31,7 @@ def main():
                                           results["boxes"],
                                           f"data/tables/{file.name}/{pic.replace('.jpg','')}.jpeg")
 
-        st.success(f"All Tables Extracted.")
+        st.success("All Tables Extracted.")
 
 if __name__ == "__main__":
     main()
