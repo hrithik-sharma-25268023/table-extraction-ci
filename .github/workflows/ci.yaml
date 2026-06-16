@@ -31,4 +31,4 @@ jobs:
 
     - name: Run Tests
       run: |
-        pytest tests/test_application.py
+        python -m pytest tests/
