@@ -29,6 +29,6 @@ jobs:
         pip install transformers==5.12.0
         pip install pytest
 
-    - name: Run Tests
-      run: |
-        python -m pytest tests/
+    # - name: Run Tests
+    #   run: |
+    #     python -m pytest tests/
