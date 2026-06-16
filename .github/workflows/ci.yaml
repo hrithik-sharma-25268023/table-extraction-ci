@@ -1,0 +1,33 @@
+name: table-extraction-ci
+
+on:
+  push:
+   branches:
+     - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+
+    - name: Checkout Code
+      uses: actions/checkout@v4
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        pip install pdf2image==1.17.0
+        pip install streamlit==1.58.0
+        pip install transformers==5.12.0
+
+    - name: Run Tests
+      run: |
+        pytest tests/test_application.py
